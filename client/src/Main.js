@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Routes, NavLink, BrowserRouter, HashRouter } from "react-router-dom";
+import { Route, Routes, NavLink, HashRouter } from "react-router-dom";
 import Home from "./routes/Home";
 import Stuff from "./routes/Stuff";
 import Contact from "./routes/Contact";
@@ -9,7 +9,7 @@ class Main extends Component {
     return (
         <HashRouter>
             <div>
-                <h1>Cool React Node App</h1>
+                <h1>Cool React Node SP App</h1>
                 <ul className="header">
                     <li><NavLink to="/">Home</NavLink></li>
                     <li><NavLink to="/stuff">Stuff</NavLink></li>
