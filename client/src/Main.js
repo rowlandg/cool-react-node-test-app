@@ -1,26 +1,29 @@
 import React, { Component } from "react";
-import { Route, NavLink, HashRouter } from "react-router-dom";
-import Home from './Home';
-import Stuff from './Stuff';
-import Contact from './Contact';
-
-// This is our app frame component
-// This is where we tie all our page components together
-
+import { Route, Routes, NavLink, BrowserRouter, HashRouter } from "react-router-dom";
+import Home from "./routes/Home";
+import Stuff from "./routes/Stuff";
+import Contact from "./routes/Contact";
+ 
 class Main extends Component {
   render() {
     return (
-        <div>
-          <h1>Simple SPA</h1>
-          <ul className="header">
-            <li><a href="/">Home</a></li>
-            <li><a href="/stuff">Stuff</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-          <div className="content">
-             
-          </div>
-        </div>
+        <HashRouter>
+            <div>
+                <h1>Cool React Node App</h1>
+                <ul className="header">
+                    <li><NavLink to="/">Home</NavLink></li>
+                    <li><NavLink to="/stuff">Stuff</NavLink></li>
+                    <li><NavLink to="/contact">Contact</NavLink></li>
+                </ul>
+                <div className="content">
+                    <Routes>
+                        <Route exact path="/" element={<Home/>}/>
+                        <Route path="/stuff" element={<Stuff/>}/>
+                        <Route path="/contact" element={<Contact/>}/>
+                    </Routes>
+                </div>
+            </div>
+        </HashRouter>
     );
   }
 }
