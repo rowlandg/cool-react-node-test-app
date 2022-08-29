@@ -6,7 +6,7 @@ import Contact from "./routes/Contact";
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from './auth/login';
 import LogoutButton from './auth/logout';
-import User from './auth/profile';
+//import User from './auth/profile';
  
 function Main() {
 
@@ -23,7 +23,7 @@ function Main() {
                             <li><NavLink to="/stuff">Stuff</NavLink></li>
                             <li><NavLink to="/contact">Contact</NavLink></li>
                             <li><LogoutButton /></li>
-                            <li><User /></li>
+                            {/* <li><User /></li> */}
                         </ul>
                         <div className="content">
                             <Routes>
@@ -35,7 +35,9 @@ function Main() {
                     </div>
                 ) : 
                     <div>
-                        <p style={{ fontSize: "1.5rem" }}>Please Login.</p>
+                        <h1>Cool React Node SP App</h1>
+                        <h2>Welcome</h2>
+                        <p style={{ fontSize: "1rem" }}>Please Login.</p>
                         <LoginButton />
                     </div>
                 }
